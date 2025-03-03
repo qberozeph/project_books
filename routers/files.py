@@ -8,6 +8,11 @@ router = APIRouter()
 async def get_books():
     return books
 
+@router.delete("/books", tags=["backend"])
+async def get_books():
+    books.clear()
+    return {"message": "Books deleted"}
+
 @router.get("/books/{book_id}", tags=["backend"])
 async def get_book(book_id: int):
     for book in books:
