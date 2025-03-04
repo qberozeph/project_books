@@ -11,10 +11,10 @@ app.include_router(files_router)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8000"],
+    allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["http://localhost:8000"],
-    allow_headers=["http://localhost:8000"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 if __name__ == "__main__":
