@@ -1,6 +1,6 @@
 async function fetchBooks() {
 	try {
-		const response = await fetch('/books')
+		const response = await fetch('http://185.195.27.13/books')
 		if (!response.ok) throw new Error('Ошибка загрузки')
 
 		const books = await response.json()
@@ -26,7 +26,7 @@ document.getElementById('update-list').addEventListener('click', function () {
 })
 
 document.getElementById('delete-all').addEventListener('click', function () {
-	fetch('/books', {
+	fetch('http://185.195.27.13/books', {
 		method: 'DELETE',
 	})
 		.then(response => {
