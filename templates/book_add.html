@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="static/css/book_add.css">
+</head>
+<body>
+  <h1>Добавление книги</h1>
+  <form action="/books" method="POST">
+    <input type="text" name="title" placeholder="Название книги">
+    <input type="text" name="author" placeholder="Автор книги">
+    <button type="submit">Добавить</button>
+  </form>
+  <a href="/book_folks" class="button">
+    <button>Вернётся на главную</button>
+  </a>
+  <script src="static/js/book_add.js"></script>
+</body>
+</html>
