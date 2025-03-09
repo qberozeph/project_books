@@ -1,8 +1,20 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field, ConfigDict
-from settings.data import books
 
 router = APIRouter()
+
+books = [
+    {
+        "id": 1,
+        "title": "Асинхронность в Python",
+        "author": "Мэттью",
+    },
+    {
+        "id": 2,
+        "title": "Backend разработка в Python",
+        "author": "Артём",
+    },
+]
 
 @router.get("/books", tags=["backend"])
 async def get_books():

@@ -13,7 +13,7 @@ form.addEventListener('submit', e => {
 		alert('Пожалуйста, заполните все обязательные поля.')
 		event.preventDefault() // Отменяем отправку формы
 	} else {
-    fetch('/books', {
+    fetch('/api/books', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -21,6 +21,6 @@ form.addEventListener('submit', e => {
 			body: JSON.stringify(data),
 		})
 
-		window.location.href = '/book_folks'
+		window.location.href = '/'
   }
 })

@@ -1,14 +1,11 @@
 from fastapi import FastAPI as FastAPI_Class
 from fastapi.middleware.cors import CORSMiddleware
-
-from routers.users import router as users_router
-from routers.files import router as files_router
+from routers.books import router as books_router
 
 app = FastAPI_Class()
+app.include_router(books_router)
 
-app.include_router(users_router)
-app.include_router(files_router)
-
+# Настройка CORS для браузера
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
